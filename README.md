@@ -1539,6 +1539,7 @@ If you fork, modify, or build upon this project, please retain the
 original copyright notice and credit the original project:
 
 **Original project:** Realme-Web-Control [https://github.com/DuGanTaDa/Realme-Web-Control]
+
 **Author:** DuGanTaDa
 
 Realme, OPPO, OnePlus, Realme Link, and related names and trademarks belong
