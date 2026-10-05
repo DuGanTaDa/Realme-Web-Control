@@ -1,17 +1,17 @@
-# Realme Buds Air 5 Pro — Web Control
+# Realme Web Control
 
 [![Unofficial](https://img.shields.io/badge/status-unofficial-orange)](#disclaimer)
 [![Web Serial](https://img.shields.io/badge/browser-Web%20Serial-4285F4)](#requirements)
 [![Bluetooth SPP](https://img.shields.io/badge/transport-Bluetooth%20SPP%2FRFCOMM-0082FC)](#architecture)
 [![Protocol](https://img.shields.io/badge/protocol-OPPOv1%20%2F%200xAA-6f42c1)](#protocol-overview)
 
-A browser-based controller for the **Realme Buds Air 5 Pro** that communicates with the earbuds without using the Realme Link desktop/phone UI.
+A browser-based controller for the **Realme Buds Air 5 Pro** & possibly other Realme TWS that communicates with the earbuds without using the Realme Link desktop/phone UI.
 
 The project uses the earbuds' **Bluetooth SPP/RFCOMM serial interface through the browser's Web Serial API**, then sends and receives the proprietary **OPPOv1 / `0xAA` protocol** packets used by the headset firmware.
 
 The project is both:
 
-1. a usable controller for the Buds Air 5 Pro, and
+1. a usable controller for the Buds Air 5 Pro, possibly other Realme TWS and
 2. a reverse-engineering / interoperability reference documenting the packet format, command mappings, captures, and known unknowns.
 
 > **Important:** This repository documents behaviour observed on the **Realme Buds Air 5 Pro**. Similar OPPO/OnePlus/Realme devices may use related protocol framing, but command payloads and semantics should not be assumed to be identical across models.
