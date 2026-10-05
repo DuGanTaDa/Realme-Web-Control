@@ -1528,3 +1528,15 @@ No proprietary Realme Link source code is intended to be included in this reposi
 Protocol documentation is based on observed Bluetooth traffic, working interoperability code, reverse-engineering of the relevant application module, and explicitly marked inference.
 
 Use the software at your own risk.
+
+## License
+
+Copyright (c) 2026 Aniket Mishra.
+
+This project is licensed under the MIT License. See [LICENSE](LICENSE).
+
+If you fork, modify, or build upon this project, please retain the
+original copyright notice and credit the original project:
+
+**Original project:** Realme Buds Air 5 Pro Web Control  
+**Author:** Aniket Mishra
