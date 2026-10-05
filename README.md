@@ -405,7 +405,7 @@ flowchart TD
     A[Bluetooth serial connection established]
     A --> B[Open port at 115200]
     B --> C[Start RX buffer]
-    C --> D[requestAllState()]
+    C --> D["requestAllState()"]
     D --> E[ANC GET]
     E --> F[EQ GET]
     F --> G[Volume enhancer GET]
