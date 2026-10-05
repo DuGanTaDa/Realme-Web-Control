@@ -23,6 +23,7 @@ You can check the prototype here: https://realmewebcontrol.vercel.app
 ## Table of contents
 
 - [What this project does](#what-this-project-does)
+- [Compatibility](#Compatibility)
 - [Architecture](#architecture)
 - [How the connection works](#how-the-connection-works)
 - [Protocol overview](#protocol-overview)
@@ -63,6 +64,86 @@ The controller currently implements or experiments with:
 - Raw TX/RX packet logging
 
 The goal is to communicate with the earbuds directly from a computer rather than relying on the normal Realme Link control UI.
+
+---
+## Compatibility
+
+The protocol was originally reverse-engineered and tested on the realme Buds Air 5 Pro, but community testing has shown that the same or closely related protocol is used across several other realme audio products.
+
+> ⚠️ Compatibility is based on community reports and has not been independently verified by the project author on every device. Different models may expose different commands or payloads.
+
+### Tested / Reported Compatibility
+
+| Device | Status | Reported functionality / issues |
+|---|---|---|
+| **realme Buds Air 5 Pro** | ✅ Primary target | Original device used for reverse-engineering. Full feature set implemented in the project. |
+| **realme Buds Air 7 Pro** | ✅ Working | Reported to work; battery percentage for buds/case was requested as a missing feature. |
+| **realme Buds Air 7** | 🟡 Working | Basic functionality reported working, but another user reported that the device was not visible in the browser. Compatibility may depend on browser/firmware. |
+| **realme Buds Air 8** | 🟡 Partial | Device has been reported working. Another user reported that the device was not detected. Bass control does not work, and enabling HD/LDAC mode can temporarily stop playback until playback is started again. |
+| **realme Buds Air 5** | ✅ Mostly working | ANC, EQ, game mode and other basic controls reported working. UI currently displays some Air 5 Pro-specific features such as Spatial Audio. |
+| **realme T310** | ✅ Working | Multiple users reported that it works, including one report describing it as working flawlessly. |
+| **realme T500 Pro** | ✅ Basic controls | Basic controls reported working and changes sync with the realme Link app quickly. |
+| **realme Buds Wireless 5 ANC** | 🟡 Working | Reported working through Brave browser. Feature coverage has not been fully tested. |
+
+### Known Compatibility Issues
+
+#### realme Buds Air 8
+
+Community testing has revealed several differences:
+
+- Device detection can fail in some Chromium-based browsers.
+- Bass control does not currently work.
+- Enabling HD/LDAC mode can interrupt playback temporarily. Playback resumes after starting it again.
+- This suggests that the Air 8 may use different payloads or command mappings for at least some features.
+
+The Air 8 has nevertheless been successfully controlled by multiple users.
+
+#### realme Buds Air 7
+
+Air 7 has been reported working, but another tester reported that the website opened without showing the device. This indicates that compatibility may vary depending on browser, firmware, or the specific Bluetooth implementation.
+
+#### realme Buds Air 5
+
+The non-Pro Air 5 reportedly supports many of the same controls, including:
+
+- ANC
+- EQ
+- Game mode
+- Other basic settings
+
+However, the current UI is designed around the Air 5 Pro and can display features that the Air 5 does not support, such as Spatial Audio.
+
+#### realme T500 Pro
+
+Basic controls have been reported to work, with changes syncing back to the official realme Link app quickly. However, at least one user reported that the project did not work at all on their T500 Pro, so compatibility is not yet considered guaranteed.
+
+### Browser Compatibility Reports
+
+Community testing has included:
+
+- Chrome — working
+- Brave — working on some devices
+- Firefox — one report of the T500 Pro working on desktop Firefox
+
+The project's primary target remains Chromium-based browsers with Web Serial support. Browser/device combinations outside the original setup may behave differently.
+
+### Community Testing Needed
+
+If you have a realme/OPPO/OnePlus audio device, you can help expand compatibility.
+
+Please report:
+
+1. Exact earbud model
+2. Firmware version
+3. Browser and operating system
+4. Whether the device appears in the connection dialog
+5. Which controls work
+6. Which controls fail
+7. Any errors shown in the serial/debug log
+
+For failed commands, please include the `TX:` and `RX:` entries from the project's serial log where possible.
+
+Do not assume that a command working on one model will work identically on another model. The protocol family appears to be shared across multiple products, but individual models can use different command mappings, payloads, or feature sets.
 
 ---
 
