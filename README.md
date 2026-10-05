@@ -1328,18 +1328,6 @@ An explicit reconnect button should be available.
 
 ---
 
-## CDN dependencies
-
-External scripts currently use unpinned CDN versions such as:
-
-```text
-vanta@latest
-```
-
-Pin production dependencies or install them locally.
-
----
-
 # Evidence and confidence levels
 
 Every protocol claim should use one of these labels.
