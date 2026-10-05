@@ -16,6 +16,8 @@ The project is both:
 
 > **Important:** This repository documents behaviour observed on the **Realme Buds Air 5 Pro**. Similar OPPO/OnePlus/Realme devices may use related protocol framing, but command payloads and semantics should not be assumed to be identical across models.
 
+You can check the prototype here: https://realmewebcontrol.vercel.app
+
 ---
 
 ## Table of contents
