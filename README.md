@@ -1531,12 +1531,19 @@ Use the software at your own risk.
 
 ## License
 
-Copyright (c) 2026 Aniket Mishra.
+MIT License
 
-This project is licensed under the MIT License. See [LICENSE](LICENSE).
+Copyright (c) 2026 DuGanTaDa
 
 If you fork, modify, or build upon this project, please retain the
 original copyright notice and credit the original project:
 
-**Original project:** Realme Buds Air 5 Pro Web Control  
-**Author:** Aniket Mishra
+**Original project:** Realme-Web-Control [https://github.com/DuGanTaDa/Realme-Web-Control]
+**Author:** DuGanTaDa
+
+Realme, OPPO, OnePlus, Realme Link, and related names and trademarks belong
+to their respective owners. This project is unofficial and is not affiliated
+with or endorsed by Realme, OPPO, or OnePlus.
+
+The reverse-engineering findings are provided for interoperability,
+research, and educational purposes.
